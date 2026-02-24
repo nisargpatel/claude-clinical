@@ -130,6 +130,20 @@ Create new `.md` files in `templates/notes/` or `templates/letters/`.
 ### Add specialty subagents
 Create new `.md` files in `.claude/agents/` with YAML frontmatter. See existing agents for the format.
 
+### Improve PubMed search quality
+Claude Clinical's evidence search and subagents work best when `WebFetch` and `WebSearch` are allowed. To enable them, create `.claude/settings.json` in the project root (this file is gitignored):
+```json
+{
+  "permissions": {
+    "allow": [
+      "WebFetch",
+      "WebSearch"
+    ]
+  }
+}
+```
+Without these permissions, literature searches fall back to the PubMed MCP server alone. Adding `WebFetch` and `WebSearch` allows subagents (like `evidence-reviewer`) to supplement MCP results with direct web retrieval, improving recall and enabling full-text access.
+
 ### Add MCP servers
 Connect additional data sources:
 ```bash
