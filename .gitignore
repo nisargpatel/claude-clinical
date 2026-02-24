@@ -1,0 +1,57 @@
+# ═══════════════════════════════════════════════════════
+# Claude Clinical — .gitignore
+# Protects patient data, personal info, and credentials
+# ═══════════════════════════════════════════════════════
+
+# Patient workspaces — may contain clinical data
+workspaces/*
+!workspaces/.gitkeep
+
+# Personal clinical context — contains physician identity
+my-clinical-context.md
+
+# Local settings with API keys
+.claude/settings.local.json
+
+# MCP server configurations with credentials (user-level)
+# (Project .mcp.json IS committed if it uses env vars, not raw keys)
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# OS files
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Data files that might contain PHI
+*.csv
+*.xlsx
+*.xls
+*.sav
+*.dta
+*.rds
+*.RData
+
+# Allow reference data (these are public code lists, not PHI)
+!reference/*.json
+!reference/*.md
