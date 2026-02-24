@@ -2,7 +2,7 @@
 
 **A clinical intelligence environment for physicians, built on Claude Code.**
 
-Claude Clinical transforms Claude Code from a general-purpose coding assistant into an agentic clinical reasoning, documentation, and research platform. It's not a chatbot — it's a workspace.
+Claude Clinical transforms Claude Code from a general-purpose coding assistant into an agentic clinical reasoning, documentation, and research platform. 
 
 ## What You Get
 
