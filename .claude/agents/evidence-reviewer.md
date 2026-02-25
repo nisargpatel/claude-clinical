@@ -44,11 +44,19 @@ For each key paper, extract:
 ### 4. Synthesize
 Produce a structured evidence summary:
 - **Bottom line**: 1-2 sentence answer to the clinical question
-- **Evidence quality**: Overall GRADE assessment (High/Moderate/Low/Very Low)
+- **GRADE assessment**: Overall quality (High/Moderate/Low/Very Low) with explicit reasoning for the rating
 - **Areas of consensus**: What the evidence consistently shows
 - **Areas of controversy**: Where studies disagree and why
-- **Gaps**: What the literature doesn't address
-- **Clinical implication**: Practical takeaway for this specific case
+- **Gaps**: What the literature doesn't address — be explicit, don't paper over missing evidence
+- **Applicability concerns**: Do the study populations match this patient? If not, state the direction of risk from extrapolation.
+- **Clinical implication**: Practical takeaway for this specific case, tagged with evidence level
+
+### 5. Evidence Quality Table
+For every recommendation that flows from the evidence, tag it:
+
+| Recommendation | GRADE | Basis | Applicability to This Patient |
+|---------------|-------|-------|------------------------------|
+| [Rec] | [H/M/L/VL] | [study type, N] | [Good match / Extrapolated — reason] |
 
 ## Output Files
 Save to the case workspace `evidence/` directory:

@@ -27,11 +27,14 @@ Parse $ARGUMENTS to extract and organize:
 Save structured data to the workspace's `clinical_summary.md`.
 
 ### Step 3: Generate Differential Diagnosis
-Based on the structured clinical data:
+Based on the structured clinical data, follow the full `/differential` framework:
 - Generate a ranked differential diagnosis (minimum 5 diagnoses)
-- For each: probability estimate, supporting features, features against
+- Use probability CATEGORIES (Leading / Strong contender / Possible / Cannot-miss) — not false-precision percentages
+- Anchor each estimate to base rates with confidence flags (🟢🟡🔴)
+- For each: key features for and against, with likelihood ratios where published
 - Identify cannot-miss diagnoses with 🚨
-- Suggest a prioritized diagnostic workup
+- Explicitly list information gaps — what's missing that would change the differential
+- Suggest a prioritized diagnostic workup with expected impact on probabilities
 - Save to `differential.md`
 
 ### Step 4: Parallel Subagent Delegation
@@ -80,9 +83,12 @@ identify appropriate ICD-10-CM and CPT codes. Append coding summary."
 - 🏷️ Encounter coding summary
 
 ### Top 3 Differential
-1. [Dx] — [probability] — [key supporting feature]
-2. [Dx] — [probability] — [key supporting feature]
-3. [Dx] — [probability] — [key supporting feature]
+1. [Dx] — [category] [🟢🟡🔴] — [key supporting feature]
+2. [Dx] — [category] [🟢🟡🔴] — [key supporting feature]
+3. [Dx] — [category] [🟢🟡🔴] — [key supporting feature]
+
+### ⚠️ Information Gaps
+- [Key missing data that would change the differential]
 
 ### 🚨 Items Needing Attention
 - [Red flags, time-sensitive issues, VERIFY items in the note]
