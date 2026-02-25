@@ -81,8 +81,10 @@ For each diagnosis, identify the single best next test to confirm or exclude it.
 ```
 
 ### Save Location
-- If a workspace exists → save to that workspace's `differential.md`
-- If no workspace → output in conversation and offer to create one
+- Always output the differential directly in the conversation
+- If a workspace already exists for this case → also save to that workspace's `differential.md`
+- Do NOT create a new workspace unless the user explicitly asks or runs `/new-case`
+- Offer: "Want me to save this to a workspace? Run /new-case to create one."
 
 ### Cognitive Bias Guards
 At the end, explicitly check:
